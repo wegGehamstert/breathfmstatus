@@ -1,0 +1,70 @@
+/* --- Upptime: BreathFM Final Status Fix --- */
+
+:root {
+  --body-background-color: #0b0c10 !important;
+  --body-text-color: #e8e9ed !important;
+}
+
+/* 1. Hintergrund & Grundfarben */
+body {
+  background-color: #0b0c10 !important;
+  background-image: radial-gradient(circle at center, #1a1c23 0%, #0b0c10 100%) !important;
+  background-attachment: fixed !important;
+  color: #e8e9ed !important; /* Hier weiss/hellgrau erzwingen */
+}
+
+.bg-image {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  background-image: url('https://djwillgill.com/wp-content/uploads/2024/08/DJ-Mixers-scaled.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 0.12; 
+  filter: grayscale(100%);
+}
+
+/* 2. Header / Navbar */
+nav, header {
+  background-color: rgba(11, 12, 16, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 3. TEXT-FIX: Alles was nicht Status ist, muss hell sein */
+/* Wir listen hier alle Text-Elemente auf, um Upptime zu ueberstimmen */
+h1, h2, h3, h4, p, span, div, li, a, .lead, strong {
+  color: #e8e9ed !important;
+}
+
+/* 4. STATUS-FARBEN RETTEN (WICHTIG!) */
+/* Diese Regeln kommen NACH dem allgemeinen Text-Fix, damit sie Vorrang haben */
+.up, 
+span.up, 
+div.up,
+[data-status="up"] { 
+  color: #28a745 !important; /* Knalliges Gruen */
+}
+
+.down, 
+span.down, 
+div.down,
+[data-status="down"] { 
+  color: #dc3545 !important; /* Knalliges Rot */
+}
+
+.degraded, 
+span.degraded, 
+div.degraded {
+  color: #ffc107 !important; /* Warn-Gelb */
+}
+
+/* 5. Zeitstempel und Meta-Infos (etwas dunkleres Grau) */
+small, .text-gray-500, .status-time {
+  color: rgba(232, 233, 237, 0.6) !important;
+}
+
+/* Links im Header/Navbar weiss halten */
+nav a, header a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
