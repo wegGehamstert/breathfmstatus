@@ -1,6 +1,6 @@
 # Change these first
-owner: BreathFM # Your GitHub organization or username, where this repository lives
-repo: BreathFM-Status # The name of this repository
+owner: wegGehamstert # Your GitHub organization or username, where this repository lives
+repo: breathfmstatus # The name of this repository
 
 sites:
   - name: Streamserver
