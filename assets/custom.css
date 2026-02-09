@@ -1,4 +1,6 @@
-/* 1. Hintergrund & Grundfarben */
+/* --- BreathFM: Full Transparency & Background Fix --- */
+
+/* 1. Grund-Setup: Bild fixieren */
 body {
   background-color: #0b0c10 !important;
   color: #e8e9ed !important;
@@ -6,7 +8,6 @@ body {
   min-height: 100vh;
 }
 
-/* Das Pseudo-Element für das DJ-Mixer Bild */
 body::before {
   content: "" !important;
   position: fixed !important;
@@ -15,27 +16,48 @@ body::before {
   width: 100% !important;
   height: 100% !important;
   z-index: -1 !important;
-  
   background-image: url('https://djwillgill.com/wp-content/uploads/2024/08/DJ-Mixers-scaled.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
-  
-  opacity: 0.15 !important; /* Etwas erhöht, damit man es sicher sieht */
+  opacity: 0.15 !important; 
   filter: grayscale(100%) !important;
 }
 
-/* 2. Transparenz-Fix für Upptime-Elemente */
-/* Falls Upptime weisse Boxen über dein Bild legt, machen wir sie hier glasig */
-.container, main, .card, .shadow, .bg-white {
-  background-color: rgba(26, 28, 35, 0.6) !important; /* Dunkel und transparent */
+/* 2. Den zentralen grauen Balken & alle Boxen killen */
+main.container,
+.container,
+.max-w-5xl,
+.mx-auto,
+section,
+.card,
+.bg-white,
+.bg-gray-100,
+.bg-gray-50,
+header > div,
+[class*="shadow"],
+[class*="rounded"],
+[class*="border"] {
+  background-color: transparent !important;
   background-image: none !important;
-  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
+  border: none !important;
+  max-width: 100% !important;
 }
 
-/* 3. Header / Navbar Anpassung */
+/* 3. Text-Sichtbarkeit optimieren */
+h1, h2, h3, h4, p, span, div, li, a {
+  color: #e8e9ed !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* 4. Status-Farben schuetzen */
+.up, [data-status="up"] { color: #28a745 !important; }
+.down, [data-status="down"] { color: #dc3545 !important; }
+.degraded { color: #ffc107 !important; }
+
+/* 5. Navigation */
 nav, header {
-  background-color: rgba(11, 12, 16, 0.8) !important;
-  backdrop-filter: blur(5px); /* Schicker Milchglas-Effekt */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background-color: rgba(11, 12, 16, 0.5) !important;
+  border: none !important;
 }
