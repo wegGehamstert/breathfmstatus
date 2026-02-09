@@ -1,36 +1,122 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Change these firsts
+owner: BreathFM # Your GitHub organization or username, where this repository lives
+repo: BreathFM-Status # The name of this repository
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
+  - name: Streamserver
+    url: https://stream.breathfm.de/login
+  - name: Mainstream
+    url: 88.99.104.157
+    port: 8000
     check: "tcp-ping"
-    ipv6: true
+    ipv6: false
+  - name: InTheMiX
+    url: 88.99.104.157
+    port: 8010
+    check: "tcp-ping"
+    ipv6: false
+  - name: Chill
+    url: 88.99.104.157
+    port: 8020
+    check: "tcp-ping"
+    ipv6: false
+  - name: 2010s
+    url: 88.99.104.157
+    port: 8030
+    check: "tcp-ping"
+    ipv6: false
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.breathfm.de
+  logoUrl: https://breathfm.de/breathfm-logo-transparent.png
+  name: Status
+  themeUrl: https://status.breathfm.de/custom.css
+  introTitle: "**BreathFM** ist ein Webradio aus der Schweiz welches in die ganze Welt streamt!"
+  introMessage: Hier seht ihr den Status unserer Sender!
+  customBodyHtml: <div class="bg-image"></div>
+  favicon: https://r2.e-z.host/7e095bd3-bee6-4515-afab-65c01b5c886c/srk5mbe3.png
+  metaTags:
+    - name: "theme-color"
+      content: "#292a2a"
+    - name: "twitter:title"
+      content: "BreathFM Status"
+    - name: "og:title"
+      content: "BreathFM Status"
+    - name: "og:description"
+      content: "Status der Radio-Sender von BreathFM!"
+    - name: "description"
+      content: "Status der Radio-Sender von BreathFM!"
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Zurück zur Webseite
+      href: https://breathfm.de/
+  links:
+    - rel: stylesheet
+      href: https://status.breathfm.de/stylesheet.css
+
+i18n:
+  activeIncidents: Aktive Vorfälle  
+  allSystemsOperational: Alle Systeme sind betriebsbereit  
+  incidentReport: "Vorfall #$NUMBER Bericht →"  
+  activeIncidentSummary: Eröffnet am $DATE mit $POSTS Beiträgen  
+  incidentTitle: Vorfall $NUMBER Details  
+  incidentDetails: Vorfalldetails  
+  incidentFixed: Behoben  
+  incidentOngoing: Laufend  
+  incidentOpenedAt: Eröffnet am  
+  incidentClosedAt: Geschlossen am  
+  incidentViewOnGitHub: Auf GitHub ansehen und abonnieren  
+  incidentCommentSummary: Veröffentlicht am $DATE von $AUTHOR  
+  incidentBack: "← Zurück zu allen Vorfällen"  
+  pastIncidents: Vergangene Vorfälle  
+  pastIncidentsResolved: In $MINUTES Minuten mit $POSTS Beiträgen behoben  
+  liveStatus: Live-Status  
+  overallUptime: "Gesamtverfügbarkeit: $UPTIME"  
+  overallUptimeTitle: Gesamtverfügbarkeit  
+  averageResponseTime: "Durchschnittliche Antwortzeit: $TIMEms"  
+  averageResponseTimeTitle: Durchschnittliche Antwortzeit  
+  sevelDayResponseTime: 7-Tage-Antwortzeit  
+  responseTimeMs: Antwortzeit (ms)  
+  up: Online  
+  down: Offline  
+  degraded: Eingeschränkt  
+  ms: ms  
+  loading: Laden  
+  navGitHub: GitHub  
+  footer: "Diese Seite wird von BreathFM betrieben und bietet Auskunft über unsere Dienste"  
+  rateLimitExceededTitle: Ratenlimit überschritten  
+  rateLimitExceededIntro: "Du hast die maximale Anzahl an Anfragen pro Stunde überschritten. Du musst warten, bevor du diese Website erneut nutzen kannst. Alternativ kannst du ein GitHub-Personal-Access-Token hinzufügen, um die Website weiter zu nutzen."  
+  rateLimitExceededWhatDoesErrorMean: Was bedeutet dieser Fehler?  
+  rateLimitExceededErrorMeaning: "Diese Website nutzt die GitHub-API, um Echtzeitdaten über den Status unserer Webseiten abzurufen. Standardmäßig erlaubt GitHub jeder IP-Adresse 60 Anfragen pro Stunde, die du bereits verbraucht hast."  
+  rateLimitExceededErrorHowCanFix: Wie kann ich das beheben?  
+  rateLimitExceededErrorFix: "Du kannst eine Stunde warten, bis dein Limit zurückgesetzt wird. Alternativ kannst du ein GitHub-Personal-Access-Token hinzufügen, das dir 5.000 Anfragen pro Stunde ermöglicht."  
+  rateLimitExceededGeneratePAT: Erfahre, wie du ein Personal-Access-Token erstellst  
+  rateLimitExceededHasSet: Du hast ein Personal-Access-Token gesetzt.  
+  rateLimitExceededRemoveToken: Token entfernen  
+  rateLimitExceededGitHubPAT: GitHub-Personal-Access-Token  
+  rateLimitExceededCopyPastePAT: Kopiere und füge dein Token ein  
+  rateLimitExceededSaveToken: Token speichern  
+  errorTitle: Ein Fehler ist aufgetreten  
+  errorIntro: Beim Abrufen der neuesten Statusdetails ist ein Fehler aufgetreten.  
+  errorText: Du kannst es in wenigen Momenten erneut versuchen.  
+  errorHome: Zur Startseite  
+  pastScheduledMaintenance: Vergangene geplante Wartungen  
+  scheduledMaintenance: Geplante Wartung  
+  scheduledMaintenanceSummaryStarted: "Begonnen am $DATE für $DURATION Minuten"  
+  scheduledMaintenanceSummaryStarts: "Beginnt am $DATE für $DURATION Minuten"  
+  startedAt: Begonnen am  
+  startsAt: Beginnt am  
+  duration: Dauer  
+  durationMin: "$DURATION Minuten"  
+  incidentCompleted: Abgeschlossen  
+  incidentScheduled: Geplant  
+  duration24H: 24 Stunden  
+  duration7D: 7 Tage  
+  duration30D: 30 Tage  
+  duration1Y: 1 Jahr  
+  durationAll: Alle  
+  locale: de-DE
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
