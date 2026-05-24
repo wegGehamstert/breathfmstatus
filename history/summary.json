@@ -4,21 +4,21 @@
     "url": "https://stream.breathfm.de/login",
     "icon": "https://icons.duckduckgo.com/ip3/stream.breathfm.de.ico",
     "slug": "streamserver",
-    "status": "down",
-    "uptime": "99.97%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "99.97%",
-    "time": 523,
-    "timeDay": 567,
-    "timeWeek": 511,
-    "timeMonth": 504,
-    "timeYear": 523,
+    "status": "up",
+    "uptime": "99.66%",
+    "uptimeDay": "67.72%",
+    "uptimeWeek": "95.39%",
+    "uptimeMonth": "98.94%",
+    "uptimeYear": "99.66%",
+    "time": 524,
+    "timeDay": 606,
+    "timeWeek": 524,
+    "timeMonth": 508,
+    "timeYear": 524,
     "dailyMinutesDown": {
       "2026-03-01": 28,
       "2026-03-19": 18,
-      "2026-05-24": 0
+      "2026-05-24": 465
     }
   },
   {
